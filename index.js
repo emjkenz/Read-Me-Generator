@@ -1,6 +1,9 @@
+// Import Filesystem and Inquirer packages
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+// List of licence badges from
+// https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 const licenseBadges = {
     "MIT License": {
         badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
@@ -20,6 +23,7 @@ const licenseBadges = {
     }
 };
 
+// Questions for Inquirer
 const questions = [
     {
         type: 'input',
@@ -70,7 +74,9 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then((answers) => {
+    // Deconstruct the answers object
     const {title, description, installation, usage, contribution, tests, licence, github, email} = answers;
+    // Create a text variable to format the README
     const readme = (
 `# ${title}
 ${licenseBadges[licence].badge}
@@ -108,8 +114,9 @@ Github - [${github}](https://github.com/${github.toLowerCase()})
 
 Email - [${email}](mailto:${email})
 `)
-
+    // Write the README to the filesystem
     fs.writeFileSync('YOUR-README.md', readme);
-
+    
+    // Tell the user the file has been created
     console.log("YOUR-README.md has been created");
 });
