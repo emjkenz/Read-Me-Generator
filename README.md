@@ -31,3 +31,6 @@ Run `npm i` to install the dependencies
 
 ## Usage
 Run `node index.js` to run the Readme Generator
+
+See the example video on how to use it:
+[Video](https://drive.google.com/file/d/1VjLkrkaNx0EyE8s0Ab-AvbTkgAzaOE54/view?usp=sharing)
