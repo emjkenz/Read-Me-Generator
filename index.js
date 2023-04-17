@@ -110,4 +110,6 @@ Email - [${email}](mailto:${email})
 `)
 
     fs.writeFileSync('YOUR-README.md', readme);
+
+    console.log("YOUR-README.md has been created");
 });
