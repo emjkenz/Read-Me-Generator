@@ -27,7 +27,8 @@ THEN I am taken to the corresponding section of the README
 ```
 
 ## Installation
-Run `npm i` to install the dependencies
+1) Clone the git repo
+2) Run `npm i` to install the dependencies
 
 ## Usage
 Run `node index.js` to run the Readme Generator
